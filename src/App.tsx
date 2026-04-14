@@ -1,7 +1,6 @@
 import "./App.css";
 import Button from "./component/ui/Button";
-import NavLink from "./component/ui/Navlink";
-import Header from "./component/header/header";
+import Header from "./component/header/Header";
 import SpeakerCard from "./component/ui/SpeakerCard";
 import Card from "./component/ui/Card";
 import Collapse from "./component/ui/Collapse";
