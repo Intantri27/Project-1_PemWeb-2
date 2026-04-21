@@ -1,126 +1,14 @@
-import "./App.css";
-import Button from "./component/ui/Button";
-import Header from "./component/header/Header";
-import SpeakerCard from "./component/ui/SpeakerCard";
-import Card from "./component/ui/Card";
-import Collapse from "./component/ui/Collapse";
+import RegisterForm from "./pages/RegisterForm";
 
-function App() {
-  const speaker =  [
-    {
-      name: "Dery Agung Triyadi",
-      role: "Aws Indonesia",
-      imageUrl:
-      "https://www.invofest-harkatnegeri.com/assets/seminar/Seminar%20Dery.png",
-    },
-    {
-      name: "Sowam Habibi",
-      role: "Google Indonesia",
-      imageUrl:
-      "https://www.invofest-harkatnegeri.com/assets/seminar/seminar%20sowam.png",
-    },
-    {
-      name: "Lhuqita Fazry",
-      role: "Mobile Development Developer, Founder Rumah Coding Indonesia",
-      imageUrl:
-      "https://www.invofest-harkatnegeri.com/assets/workshop/workshop%20mobile.png",
-    },
-  ];
-  const collapseItem = [
-    {
-      title: "Apa itu Invofest?",
-      description:
-      "Invofest (Informatics Vocational Festival) adalah festival tahunan yang bertujuan untuk menginspirasi dan memberdayakan generasi muda Indonesia dalam menghadapi era digital. Dengan mengusung tema Beyond Limits, Beyond Intelligence: Innovate for a Smarter Tomorrow ",
-    },
-    {
-      title: "Siapa saja yang dapat mengikuti Invofest?",
-      description: "Invofest terbuka untuk semua mahasiswa di Indonesia yang memiliki minat dalam bidang informatika, teknologi, dan inovasi. Kami mengundang mahasiswa dari berbagai jurusan untuk bergabung dan berpartisipasi dalam festival ini.",
-    },
-    {
-      title: "Apa saja kegiatan yang akan diadakan selama Invofest?",
-      description: "Invofest akan menyelenggarakan berbagai kegiatan menarik, termasuk kompetisi, seminar, workshop, dan talkshow yang akan membahas berbagai topik terkait teknologi dan inovasi. Peserta dapat memilih untuk mengikuti kegiatan yang sesuai dengan minat dan keahlian mereka.",
-    },
-  ];
-  const cardItems = [
-    {
-      title: "IT Seminar",
-      description: "Seminar nasional ini membahas 'Human-AI Integration: Merancang Arsitektur Kolaboratif, Bukan Kompetitif' untuk mengembangkan potensi diri dan pengetahuan teknologi lebih dalam lagi.",
-    },
-    {
-      title: "IT Talkshow",
-      description:
-      "Talkshow 'Humanizing Technology: Kolaborasi Manusia dan AI di Masa Depan' membahas peran manusia dalam memanfaatkan AI untuk solusi berkelanjutan dan peningkatan teknologi.",
-    },
-    {
-      title: "IT Competition",
-      description:
-      "Kompetisi 'From Creation to Innovation' mengajak generasi muda untuk mengembangkan inovasi dan kreativitas guna membentuk kelompok yang memiliki potensi luar biasa, yang mampu mewujudkan masa depan yang berkelanjutan.",
-    },
-    {
-      title: "IT Workshop",
-      description: "Workshop 'AI for a Sustainable Future: The Role of Z Generation in the Digital Era' membekali Gen Z dengan keterampilan praktis AI untuk menciptakan solusi berkelanjutan.",
-    },
-    ];
-
-
-
+function App (){
   return (
-  <>
-  <Header />
-  <div className="max-w-7xl mx-auto">
-    <section id="hero"
-    className="py-10 flex gap-10 justify-between items-center">
-      <div className="w-2/3 flex flex-col gap-6">
-        <img src="https://www.invofest-harkatnegeri.com/assets/text-image.png" alt="" className="w-96"/>
-        <p>
-          Invofest (Informatics Vocational Festival) adalah festival tahunan yang bertujuan untuk menginspirasi dan memberdayakan generasi muda Indonesia dalam menghadapi era digital. Dengan mengusung tema "Beyond Limits, Beyond Intelligence: Innovate for a Smarter Tomorrow ".
-        </p>
-
-        <div className="flex gap-3">
-          <Button label="Info selengkapnya" variant="primary"/>
-          <Button label="Hubungi panitia" variant="outline"/>
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-4 text-center"> Registrasi Event </h2>
+        <RegisterForm />
       </div>
-      <div className="w-1/3">
-          <img src="https://www.invofest-harkatnegeri.com/assets/Maskot-Hero.png" alt="" />
-        </div>  
-    </section>
-
-    <section id="speaker" className="py-24">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-3">
-        {speaker.map((speaker, index) => (
-          <SpeakerCard
-          key={index}
-          name={speaker.name}
-          role={speaker.role}
-          imageUrl={speaker.imageUrl}
-        />
-        ))}
-      </div>
-    </section>
-
-    <section id="card" className="py-24 grid grid-cols-1 md:grid-cols-2 gap-10 px-3">
-      {cardItems.map((item, index) => (
-        <Card key={index} className="w-full">
-          <h3 className="text-2xl font-semibold text-red-900 mb-4">{item.title}</h3>
-          <p className="text-gray-700">{item.description}</p>
-          <Button label="Info selengkapnya"
-          variant="primary"
-          className="mt-4" 
-          />
-        </Card>
-      ))}
-    </section>
-
-    <section id="collapse" className="py-24 flex flex-col gap-2 px-3">
-      {collapseItem.map((item, index) => (
-        <Collapse key={index} tittle={item.title} description={item.description} 
-        />
-      ))}
-    </section>
-  </div>
-  </>
-  );
+    </div>
+  )
 }
 
 export default App;
