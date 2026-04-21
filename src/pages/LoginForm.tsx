@@ -4,7 +4,6 @@ import InputPassword from "../component/ui/InputPassword";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import {z} from "zod";
-import Button from "../component/ui/Button";
 
 type FormData = {
     email: string;

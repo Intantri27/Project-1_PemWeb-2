@@ -1,9 +1,10 @@
 import "./App.css";
-import Button from "./component/ui/Button";
-import Header from "./component/header/Header";
-import SpeakerCard from "./component/ui/SpeakerCard";
-import Card from "./component/ui/Card";
-import Collapse from "./component/ui/Collapse";
+
+import Button from "../component/ui/Button";
+import Header from "../component/header/Header";
+import SpeakerCard from "../component/ui/SpeakerCard";
+import Card from "../component/ui/Card";
+import Collapse from "../component/ui/Collapse";
 
 function App() {
   const speaker =  [
