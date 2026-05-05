@@ -1,4 +1,3 @@
-import { size } from "zod";
 import { Home, Trophy, Laptop, Mic, Tv } from "lucide-react"; 
 import { NavLink } from "react-router-dom";
 
