@@ -9,7 +9,7 @@ export const Collapse: React.FC<collapseProps> = ({tittle, description}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className=" border border-red-400 border-b-4 border-r-5 rounded-md m-1">
+        <div className=" border border-red-900 border-b-4 border-r-5 rounded-md m-1">
             <button onClick={() => setIsOpen(!isOpen)}
                 className="cursor-pointer w-full px-4 py-3 flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors"
             >

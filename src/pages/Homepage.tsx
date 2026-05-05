@@ -1,12 +1,9 @@
-import "./App.css";
-
 import Button from "../component/ui/Button";
-import Header from "../component/header/Header";
 import SpeakerCard from "../component/ui/SpeakerCard";
 import Card from "../component/ui/Card";
 import Collapse from "../component/ui/Collapse";
 
-function App() {
+export default function Homepage() {
   const speaker =  [
     {
       name: "Dery Agung Triyadi",
@@ -67,13 +64,12 @@ function App() {
 
   return (
   <>
-  <Header />
   <div className="max-w-7xl mx-auto">
     <section id="hero"
-    className="py-10 flex gap-10 justify-between items-center">
+    className="flex gap-10 justify-between items-center">
       <div className="w-2/3 flex flex-col gap-6">
         <img src="https://www.invofest-harkatnegeri.com/assets/text-image.png" alt="" className="w-96"/>
-        <p>
+        <p className="text-medium text-gray-600 text-2xl">
           Invofest (Informatics Vocational Festival) adalah festival tahunan yang bertujuan untuk menginspirasi dan memberdayakan generasi muda Indonesia dalam menghadapi era digital. Dengan mengusung tema "Beyond Limits, Beyond Intelligence: Innovate for a Smarter Tomorrow ".
         </p>
 
@@ -84,7 +80,7 @@ function App() {
       </div>
       <div className="w-1/3">
           <img src="https://www.invofest-harkatnegeri.com/assets/Maskot-Hero.png" alt="" />
-        </div>  
+      </div>  
     </section>
 
     <section id="speaker" className="py-24">
@@ -122,6 +118,4 @@ function App() {
   </div>
   </>
   );
-}
-
-export default App;
+};

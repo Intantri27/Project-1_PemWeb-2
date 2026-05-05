@@ -5,6 +5,7 @@ import {PasswordInput} from "../component/ui/InputPassword";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SelectInput } from "../component/ui/SelectInput";
 import Button from "../component/ui/Button";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm() {
   const {
@@ -69,6 +70,9 @@ export default function RegisterForm() {
       </div>
 
       <Button label="Daftar" loading={isSubmitting} />
+              <div>
+          Sudah punya akun? <Link to="/login" className="text-red-900">Login Sekarang</Link>
+        </div>
     </form>
   );
 }
